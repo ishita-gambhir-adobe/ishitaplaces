@@ -111,6 +111,8 @@ dependencies {
   //noinspection GradleDynamicVersion
   implementation "com.facebook.react:react-native:+"
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+  api "com.adobe.marketing.mobile:places:3.+"
+  implementation 'com.google.android.gms:play-services-location:16.0.0'
 }
 
 if (isNewArchitectureEnabled()) {
