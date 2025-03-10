@@ -12,6 +12,12 @@ buildscript {
     // noinspection DifferentKotlinGradleVersion
     classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
   }
+
+  ext {
+        // Add these codegen configs
+        reactNativeCodegenDir = "$rootDir/../node_modules/react-native-codegen"
+        reactNativeRootDir = "$rootDir/../node_modules/react-native"
+    }
 }
 
 def reactNativeArchitectures() {
