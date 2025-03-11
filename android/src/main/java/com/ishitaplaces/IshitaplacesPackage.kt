@@ -19,13 +19,14 @@ class IshitaplacesPackage : BaseReactPackage() {
   override fun getReactModuleInfoProvider(): ReactModuleInfoProvider {
     return ReactModuleInfoProvider {
       val moduleInfos: MutableMap<String, ReactModuleInfo> = HashMap()
+      val isTurboModule = BuildConfig.IS_NEW_ARCHITECTURE_ENABLED
       moduleInfos[IshitaplacesModule.NAME] = ReactModuleInfo(
         IshitaplacesModule.NAME,
         IshitaplacesModule.NAME,
         false,  // canOverrideExistingModule
         false,  // needsEagerInit
         false,  // isCxxModule
-        true // isTurboModule
+        isTurboModule // isTurboModule
       )
       moduleInfos
     }

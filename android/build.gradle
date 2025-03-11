@@ -99,6 +99,9 @@ android {
             "generated/java",
             "generated/jni"
           ]
+          java.srcDirs += ["src/newarch"]
+      } else {
+        java.srcDirs += ["src/oldarch"]
       }
     }
   }
